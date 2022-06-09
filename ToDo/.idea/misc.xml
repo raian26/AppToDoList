@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/raian/AndroidStudioProjects/ExercicioToDoList/ToDo/app/src/main/res/layout/activity_main.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/raian/AndroidStudioProjects/ExercicioToDoList/ToDo/app/src/main/res/layout/card_layout.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/raian/AndroidStudioProjects/ExercicioToDoList/ToDo/app/src/main/res/layout/fragment_form.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/raian/AndroidStudioProjects/ExercicioToDoList/ToDo/app/src/main/res/layout/fragment_list.xml" value="0.25" />
         <entry key="..\:/Users/raian/AndroidStudioProjects/ToDo/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/raian/AndroidStudioProjects/ToDo/app/src/main/res/layout/card_layout.xml" value="0.102880658436214" />
         <entry key="..\:/Users/raian/AndroidStudioProjects/ToDo/app/src/main/res/layout/fragment_form.xml" value="0.22" />

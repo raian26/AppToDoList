@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.GridLayout
 import android.widget.LinearLayout
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.generation.todo.adapter.TarefaAdapter
 import com.generation.todo.databinding.FragmentListBinding
+import com.generation.todo.model.Categoria
 import com.generation.todo.model.Tarefa
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -27,26 +29,18 @@ class ListFragment : Fragment() {
 
 
         var listTarefas = listOf(
-            Tarefa("Lavar a louça",
-                "Lavar a louça do café e do jantar",
+            Tarefa(1,
+                "Lavar a louça",
+                "Lavar a louça do café e janta",
                 "Raian",
-                "2022/06/07",
+                "09/06/2022",
                 true,
-                "Dia a dia"
+
+
             ),
-            Tarefa("Regar as plantas",
-                "regar as plantas da casa",
-                "Raian",
-                "2022/06/10",
-                false,
-                "Cuidados da casa"
+            Tarefa(
             ),
-            Tarefa("Skate",
-                "Andar de skate na parte da manhã",
-                "Raian",
-                "2022/06/11",
-                false,
-                "Esporte e lazer"
+            Tarefa(
             )
         )
 
