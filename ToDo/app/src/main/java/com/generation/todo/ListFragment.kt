@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridLayout
 import android.widget.LinearLayout
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.generation.todo.adapter.TarefaAdapter
+import com.generation.todo.databinding.ActivityMainBinding
 import com.generation.todo.databinding.FragmentListBinding
 import com.generation.todo.model.Categoria
 import com.generation.todo.model.Tarefa
@@ -20,13 +22,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class ListFragment : Fragment() {
 
     private lateinit var binding : FragmentListBinding
+    private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding =FragmentListBinding.inflate(layoutInflater,container,false)
-
+        mainViewModel.listTarefa()
 
         // Configuração do RecyclerView
         val adapter =TarefaAdapter()
@@ -38,6 +41,13 @@ class ListFragment : Fragment() {
         binding.floatingAdd.setOnClickListener{
             findNavController().navigate(R.id.action_listFragment_to_formFragment2)
         }
+
+        mainViewModel.myTarefaResponse.observe(viewLifecycleOwner){
+            response -> if(response.body() != null){
+                adapter.setList(response.body()!!)
+        }
+        }
+
         return binding.root
     }
 }
