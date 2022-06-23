@@ -20,6 +20,7 @@ class MainViewModel @Inject constructor(
     private val repository: Repository
 ) : ViewModel() {
 
+    var tarefaSeleciona: Tarefa? = null
 
     private val _myCategoriaResponse =
         MutableLiveData<Response<List<Categoria>>>()
@@ -71,6 +72,17 @@ class MainViewModel @Inject constructor(
 
             } catch (e: Exception) {
                 Log.d("Erro de requisição", e.message.toString())
+            }
+        }
+    }
+
+    fun updateTarefa(tarefa: Tarefa) {
+        viewModelScope.launch {
+            try {
+                repository.updateTarefa(tarefa)
+                listTarefa()
+            } catch (e: Exception) {
+                Log.d("Erro!", e.message.toString())
             }
         }
     }
