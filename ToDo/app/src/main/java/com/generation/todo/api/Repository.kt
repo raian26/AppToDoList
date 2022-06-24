@@ -20,4 +20,7 @@ class Repository {
     suspend fun updateTarefa(tarefa:Tarefa):Response<Tarefa>{
         return  RetrofitInstance.api.updateTarefa(tarefa)
     }
+    suspend fun deleteTarefa(id:Long): Response<Tarefa>{
+        return RetrofitInstance.api.deleteTarefa(id)
+    }
 }
